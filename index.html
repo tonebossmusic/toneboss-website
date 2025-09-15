@@ -1,0 +1,303 @@
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="videos.html">Videos</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="index.html" class="home-emoji">🫆</a></li>
+  </ul>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tone Bo$$ - Music</title>
+  <link rel="stylesheet" href="Styles.css">
+  <style>
+    /* Basic reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 115vh;
+      background: url('assets/bg.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 5%;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+      z-index:1;
+    }
+    .hero-content {
+      position: relative;
+      z-index:2;
+      opacity:0;
+      transform: translateY(20px);
+      animation: fadeIn 2s forwards;
+    }
+    .hero-content h1 { font-size:4rem; margin-bottom:1rem; }
+    .hero-content p { font-size:1.5rem; margin-bottom:2rem; }
+    .cover-art { max-width:200px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5); }
+
+    /* Floating play button */
+    .play-btn {
+      position: fixed;
+      bottom:30px; right:30px;
+      background:#ff0044;
+      color:white;
+      border:none;
+      border-radius:50%;
+      width:70px; height:70px;
+      font-size:1.5rem;
+      cursor:pointer;
+      z-index:10;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .play-btn:hover { transform:scale(1.1); }
+
+    /* Sections */
+    section { padding:5rem 2rem; text-align:center; }
+    .about { background:#111; color:#fff; }
+    .music { background:#222; color:#fff; }
+    .music h2 { margin-bottom:2rem; }
+    .track { margin-bottom:2rem; }
+    .videos { background:#111; color:#fff; }
+    .gallery { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; background:#222; padding:2rem; }
+    .gallery img { max-width:200px; border-radius:10px; }
+
+    /* Animations */
+    @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
+
+    @media(max-width:768px){
+      .hero { align-items:center; text-align:center; padding-left:0; }
+      .cover-art { margin:1rem auto 0 auto; }
+      .gallery img { max-width:150px; }
+    }
+
+    audio { display:block; margin:0 auto 1rem auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Tone Bo$$</h1>
+      <p>🎶 New Music 🎶</p>
+<div class="hero-content" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+  <!-- Cover Art -->
+  <img src="assets/cover.png" alt="Cover Art" class="cover-art">
+  
+  <!-- Audio under cover art -->
+  <p>🎶 Let It Go 🎶</p>
+  <audio id="audio-player" controls>
+    <source src="audio/heartless.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+    </div>
+  </section>
+  <button class="play-btn" id="play-btn">▶</button>
+
+  <!-- About -->
+ <section class="about" id="about" style="
+  background: url('assets/about.jpg') no-repeat center 15%;
+  background-size: cover;
+  color: white;
+  padding: 5rem 2rem;
+  position: relative;
+  text-align: center;
+">
+  <!-- Overlay -->
+  <div style="
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index:1;
+  "></div>
+
+  <div style="
+    position: relative;
+    z-index:2;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  ">
+    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">About Tone Bo$$</h2>
+    <p>
+     Tone Bo$$ is a versatile Caribbean artist who delivers powerful lyrics. From hard-hitting bangers to emotional tracks, his music takes listeners on a journey through rhythm, passion, and storytelling, making every track a unique experience for fans of authentic, high-quality music. Hailing from St Lucia, Tone Bo$$’s life journey is what motivates and inspires him to share his story and talent with the world.
+    </p>
+  </div>
+</section>
+  <!-- Music -->
+ <section class="music" id="music" style="
+  background: url('assets/musicbanna.jpg') center/cover no-repeat;
+  color: white;
+  padding: 5rem 50rem;
+  text-align: center;
+  position: relative;
+">
+  <!-- Optional overlay for readability -->
+  <div style="
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.5);
+    z-index:1;
+  "></div>
+
+  <div class="music-description" style="
+    position: relative;
+    z-index:2;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.0;
+  ">
+   <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Music</h2>
+    
+    <p>
+   Released 7 singles, 2 feature singles (Gwadeloupe Cho, Stepping Too Hard), and 1 album (RedDot, 14 tracks, incl. 2 features). Collaborated with artists like Brasco, La Rose, Kevin, Mata LS, Green Money, and producers Blaze on the Bords, Stunner on da Beat, Mr-Tod the Riddim God, and Gringo’z Records.
+    </p>
+  </div>
+</section>
+
+ <!-- Videos -->
+<section class="videos" id="videos" style="
+  position: relative;
+  width: 100%;
+  height: 50vh; /* adjust height as needed */
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  overflow: hidden;
+">
+  <!-- Video on the left -->
+  <div style="flex: 1; position: relative; height: 100%;">
+    <video autoplay muted loop playsinline style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-60%, -50%); /* slightly left */
+      object-fit: cover;
+      z-index: 1;
+      border-radius: 10px;
+    ">
+      <source src="videos/love.MOV" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Social / YouTube links on the right -->
+<div class="videos-links" style="
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: flex-end;
+">
+  <!-- YouTube -->
+  <a href="https://youtube.com/@toneboss758?si=pvkWjB6UnhRuuepo" target="_blank" style="
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff0044;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+  ">
+    <img src="assets/icons/YouTube.png" alt="YouTube" style="width: 50px; height: 50px;">
+    YouTube
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/toneboss758?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff0044;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+  ">
+    <img src="assets/icons/instagram.png" alt="Instagram" style="width: 50px; height: 50px;">
+    Instagram
+  </a>
+
+   <!-- TikTok -->
+  <a href="https://www.tiktok.com/@toneboss.music?_t=ZN-8zkbz5v56Up&_r=1" target="_blank" style="
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff0044;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+  ">
+    <img src="assets/icons/tiktok.png" alt="TikTok" style="width: 50px; height: 50px;">
+    TikTok
+  </a>
+</div>
+
+<style>
+  /* Hover effects for all links */
+  .videos-links a:hover {
+    color: #000; /* highlight on hover */
+    transform: scale(1.1);
+  }
+</style>
+
+</section>
+
+  <script>
+    const audio = document.getElementById('audio-player');
+    const playBtn = document.getElementById('play-btn');
+
+    // Play/pause toggle
+    playBtn.addEventListener('click', () => {
+      if(audio.paused){
+        audio.play(); playBtn.textContent='⏸';
+      } else {
+        audio.pause(); playBtn.textContent='▶';
+      }
+    });
+
+    // Fade-in audio when first played
+    let fadeInterval;
+    audio.addEventListener('play', () => {
+      audio.volume = 0;
+      clearInterval(fadeInterval);
+      fadeInterval = setInterval(()=>{
+        if(audio.volume<0.5) audio.volume+=0.01;
+        else clearInterval(fadeInterval);
+      },100);
+    });
+  </script>
+</body>
+</html>
+
