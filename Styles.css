@@ -531,4 +531,75 @@ nav ul li a.home-emoji {
 nav ul li a.home-emoji:hover {
   transform: scale(1.2);
   background: #cc0036;
+}/* ===== Mobile Styles (max-width: 768px) ===== */
+@media (max-width: 768px) {
+
+  /* Hero Section */
+  .hero {
+    align-items: center;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .cover-art {
+    max-width: 150px;
+    margin: 1rem auto;
+  }
+  audio {
+    width: 90%;
+  }
+
+  /* Music Section */
+  .music-description {
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Video Section */
+  .videos {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .videos video {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+  .videos h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* About Section */
+  .about div {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Gallery Section */
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Social Links */
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
 }
+
